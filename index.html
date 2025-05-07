@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>رؤى الخير للمقاولات</title>
+  <style>
+    body, html { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    .header {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 { color: #2c3e50; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin: 10px 0; font-size: 18px; }
+  </style>
+</head>
+<body>
+
+<div class="header" id="header">
+  <div class="overlay">
+    <h1>رؤى الخير للمقاولات</h1>
+    <p>حلول متكاملة في المقاولات العامة</p>
+  </div>
+</div>
+
+<div class="section" id="about">
+  <h2>من نحن</h2>
+  <p>شركة رؤى الخير للمقاولات تقدم خدمات تركيب الأبواب والواجهات والعديد من حلول المقاولات باحترافية عالية.</p>
+</div>
+
+<div class="section" id="services">
+  <h2>الخدمات</h2>
+  <ul>
+    <li>توريد و تركيب الابواب والشبابيك والحمايات</li>
+    <li>توريد و تركيب الكلادينج والوجهات</li>
+    <li>توريد وتركيب الشبوك</li>
+    <li>توريد وتركيب المضلات والسواتر</li>
+    <li>طلاء الهياكل الحديدية والخشب</li>
+    <li>توريد وتركيب الهناجر</li>
+    <li>توريد الرمل والبحص</li>
+    <li>نقل الانقاض والمخلفات</li>
+  </ul>
+</div>
+
+<script>
+  const images = [
+    "img1.jpg",
+    "img2.jpg",
+    "img3.jpg"
+  ];
+  let current = 0;
+  const header = document.getElementById("header");
+
+  function changeBackground() {
+    header.style.backgroundImage = `url('${images[current]}')`;
+    current = (current + 1) % images.length;
+  }
+
+  changeBackground();
+  setInterval(changeBackground, 6000);
+</script>
+
+</body>
+</html>
